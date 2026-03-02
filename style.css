@@ -44,6 +44,7 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     justify-content: center;
     transition: transform 0.2s ease, filter 0.2s ease;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    min-height: 250px; /* Đảm bảo các hộp có chiều cao bằng nhau */
 }
 
 /* Hiệu ứng khi lướt chuột qua hộp chưa mở */
@@ -54,7 +55,7 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
 }
 
 /* Hiệu ứng mờ đi một chút khi hộp đã được mở */
-.box.opened { cursor: default; filter: brightness(0.9); }
+.box.opened { cursor: default; filter: brightness(0.95); }
 
 /* Chi tiết văn bản trong hộp */
 .box-num {
@@ -67,11 +68,28 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     border-radius: 20px;
 }
 
-.box-icon { font-size: 4rem; margin-bottom: 15px; }
-.box-name { font-size: 1.2rem; font-weight: 600; margin: 0 0 5px; }
+.box-icon { 
+    font-size: 4rem; 
+    margin-bottom: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CSS CHO HÌNH ẢNH MẠNH TÂN */
+.gift-img {
+    width: 100px;         /* Độ rộng ảnh */
+    height: 100px;        /* Độ cao ảnh */
+    object-fit: cover;    /* Cắt ảnh vuông để không bị méo mặt */
+    border-radius: 50%;   /* Làm ảnh hình tròn */
+    border: 3px solid white; /* Viền trắng bao quanh */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Đổ bóng cho ảnh */
+}
+
+.box-name { font-size: 1.4rem; font-weight: 700; margin: 10px 0 5px; color: #fff; }
 .box-status { font-size: 0.9rem; opacity: 0.9; margin: 0; }
 
-/* BẢNG 12 MÀU GRADIENT TUYỆT ĐẸP */
+/* BẢNG 12 MÀU GRADIENT */
 .c1 { background: linear-gradient(135deg, #ffb142, #ff9f43); }
 .c2 { background: linear-gradient(135deg, #a55eea, #8854d0); }
 .c3 { background: linear-gradient(135deg, #45aaf2, #2d98da); }
@@ -85,7 +103,7 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
 .c11 { background: linear-gradient(135deg, #34ace0, #227093); }
 .c12 { background: linear-gradient(135deg, #706fd3, #474787); }
 
-/* Responsiveness (Cho giao diện điện thoại/tablet) */
+/* Responsiveness */
 @media (max-width: 900px) { .grid-container { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 700px) { .grid-container { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { h1 { font-size: 2.2rem; } .grid-container { grid-template-columns: 1fr; } }
