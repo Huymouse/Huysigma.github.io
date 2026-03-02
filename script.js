@@ -1,6 +1,6 @@
 // Danh sách 12 phần thưởng
 const gifts = [
-    { name: "Cúp Vàng", icon: "🏆" },
+    { name: "Cúp Vàng", Image: "https://cdn.discordapp.com/attachments/1259727756846043189/1478046365555884102/donk_depzai.jpg?ex=69a6f972&is=69a5a7f2&hm=65d12c74b73c65d1f10c3aeddf134531f7e38f7ed402ec3f61e590d661aa38c9&" },
     { name: "Gậy Phép Thuật", icon: "🪄" },
     { name: "Kim Cương", icon: "💎" },
     { name: "Pháo Bông", icon: "🎉" },
@@ -62,11 +62,11 @@ for (let i = 0; i < 12; i++) {
         nameEl.innerText = gift.name;
         nameEl.style.display = 'block'; // Hiện tên quà lên
         
-        this.querySelector('.box-status').innerText = 'Đã mở!';
+        this.querySelector('.box-status').innerText = 'Chưa tày lắm!';
 
         // 4. Cập nhật thanh tiến trình
         openedCount++;
-        progressText.innerText = `Tiến trình: ${openedCount} / 12 hộp đã mở`;
+        progressText.innerText = `Tiến trình: ${openedCount} / 12 hộp đã mất trink`;
     });
 
     // Bơm hộp quà vào giao diện
