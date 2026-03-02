@@ -1,17 +1,17 @@
 // Danh sách 12 phần thưởng
 const gifts = [
-    { name: "Cúp Vàng", Image: "https://cdn.discordapp.com/attachments/1259727756846043189/1478046365555884102/donk_depzai.jpg?ex=69a6f972&is=69a5a7f2&hm=65d12c74b73c65d1f10c3aeddf134531f7e38f7ed402ec3f61e590d661aa38c9&" },
-    { name: "Gậy Phép Thuật", icon: "🪄" },
-    { name: "Kim Cương", icon: "💎" },
-    { name: "Pháo Bông", icon: "🎉" },
-    { name: "Vương Miện", icon: "👑" },
-    { name: "Ngôi Sao", icon: "⭐" },
-    { name: "Trái Tim", icon: "❤️" },
-    { name: "Ngọn Lửa", icon: "🔥" },
-    { name: "Cầu Vồng", icon: "🌈" },
-    { name: "Tên Lửa", icon: "🚀" },
-    { name: "Huy Chương", icon: "🏅" },
-    { name: "Cỏ 4 Lá", icon: "🍀" }
+    { name: "Mạnh Tân", image: "manh-tan.png" },
+    { name: "Mạnh Tân", image: "manh-tan.png" },
+    { name: "Mạnh Tân", image: "manh-tan.png" },
+    { name: "Mạnh Tân", image: "manh-tan.png" },
+    { name: "Mạnh Tân", image: "manh-tan.png" },
+    { name: "Mạnh Tân", image: "manh-tan.png" },
+    { name: "Mạnh Tân", image: "manh-tan.png" },
+    { name: "Mạnh Tân", image: "manh-tan.png" },
+    { name: "Mạnh Tân", image: "manh-tan.png" },
+    { name: "Mạnh Tân", image: "manh-tan.png" },
+    { name: "Mạnh Tân", image: "manh-tan.png" },
+    { name: "Mạnh Tân", image: "manh-tan.png" }
 ];
 
 // Danh sách 12 màu nền gradient tương ứng trong CSS
