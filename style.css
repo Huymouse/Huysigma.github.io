@@ -1,45 +1,180 @@
+/* Thiết lập chung */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
     margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #2e1a47 0%, #1c1429 100%);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    padding: 60px 20px 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* Thanh tiến trình */
+.progress-container {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 25px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+}
+
+.progress-bar {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Lưới các hộp quà */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* Styling chung cho các hộp */
+.box {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-color: #f4f4f9;
-    transition: background-color 0.5s ease;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid transparent;
 }
 
-header {
-    text-align: center;
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.box-num {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.box-icon {
+    font-size: 4rem;
     margin-bottom: 20px;
 }
 
-h1 {
-    color: #333;
+.box-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 10px;
 }
 
-.about {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    max-width: 400px;
-    text-align: center;
+.box-status {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 0;
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
+/* --- Trạng thái hộp đã mở --- */
+.box.opened {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-width: 2px;
+}
+
+/* Màu sắc cho hộp đã mở (dựa trên glow hiệu ứng) */
+.box.opened.orange {
+    border-color: #ff9f43;
+    box-shadow: 0 0 20px rgba(255, 159, 67, 0.4);
+}
+
+.box.opened.purple {
+    border-color: #9b59b6;
+    box-shadow: 0 0 20px rgba(155, 89, 182, 0.4);
+}
+
+.box.opened.cyan {
+    border-color: #31d5f2;
+    box-shadow: 0 0 20px rgba(49, 213, 242, 0.4);
+}
+
+.box.opened.pink {
+    border-color: #ff6b81;
+    box-shadow: 0 0 20px rgba(255, 107, 129, 0.4);
+}
+
+.box.opened.red {
+    border-color: #ff4757;
+    box-shadow: 0 0 20px rgba(255, 71, 87, 0.4);
+}
+
+/* --- Trạng thái hộp chưa mở --- */
+.box.unopened {
     cursor: pointer;
-    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.6);
 }
 
-button:hover {
-    background-color: #0056b3;
+.box.unopened:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.box.unopened .box-icon {
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+.box.unopened.yellow:hover {
+    border-color: #f1c40f;
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.3);
+}
+
+.box.unopened.blue:hover {
+    border-color: #3498db;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+}
+
+.box.unopened.pink-alt:hover {
+    border-color: #e84393;
+    box-shadow: 0 0 15px rgba(232, 67, 147, 0.3);
+}
+
+/* Footer */
+footer {
+    padding: 30px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Responsiveness (cho điện thoại) */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }

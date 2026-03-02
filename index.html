@@ -3,28 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Cá Nhân</title>
+    <title>Hộp Quà Bí Ẩn - Thử Vận May Của Bạn!</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
-        <h1 id="greeting">Chào mừng bạn!</h1>
-        <p>Tôi là một lập trình viên tương lai.</p>
+        <h1>✧ Hộp Quà Bí Ẩn ✧</h1>
+        <p>Nhấn vào bất kỳ hộp nào để xem món quà bất ngờ của bạn!</p>
+        <div class="progress-container">
+            <div class="progress-bar">Tiến trình: 6 / 12 hộp đã mở</div>
+        </div>
     </header>
 
-    <main>
-        <section class="about">
-            <h2>Giới thiệu</h2>
-            <p>Đây là trang web đầu tiên của tôi được xây dựng bằng HTML, CSS và JS.</p>
-        </section>
+    <main class="grid-container">
+        <div class="box opened orange">
+            <p class="box-num">Hộp #1</p>
+            <div class="box-icon">🏆</div>
+            <h3 class="box-name">Cúp Vàng</h3>
+            <p class="box-status">Đã mở!</p>
+        </div>
 
-        <button id="colorBtn">Đổi màu nền ngẫu nhiên</button>
-    </main>
+        <div class="box opened purple">
+            <p class="box-num">Hộp #2</p>
+            <div class="box-icon">🪄</div>
+            <h3 class="box-name">Gậy Phép Thuật</h3>
+            <p class="box-status">Đã mở!</p>
+        </div>
+
+        <div class="box opened cyan">
+            <p class="box-num">Hộp #3</p>
+            <div class="box-icon">💎</div>
+            <h3 class="box-name">Kim Cương Lấp Lánh</h3>
+            <p class="box-status">Đã mở!</p>
+        </div>
+
+        <div class="box opened pink">
+            <p class="box-num">Hộp #4</p>
+            <div class="box-icon">🎉</div>
+            <h3 class="box-name">Pháo Bông</h3>
+            <p class="box-status">Đã mở!</p>
+        </div>
+
+        <div class="box opened red">
+            <p class="box-num">Hộp #5</p>
+            <div class="box-icon">🎁</div>
+            <h3 class="box-name">Hộp Quà</h3>
+            <p class="box-status">Đã mở!</p>
+        </div>
+
+        <div class="box unopened yellow">
+            <p class="box-num">Hộp #6</p>
+            <div class="box-icon">🎁</div>
+            <p class="box-status">Nhấn để mở</p>
+        </div>
+
+        <div class="box unopened blue">
+            <p class="box-num">Hộp #7</p>
+            <div class="box-icon">🎁</div>
+            <p class="box-status">Nhấn để mở</p>
+        </div>
+
+        <div class="box unopened pink-alt">
+            <p class="box-num">Hộp #8</p>
+            <div class="box-icon">🎁</div>
+            <p class="box-status">Nhấn để mở</p>
+        </div>
+
+        </main>
 
     <footer>
-        <p>&copy; 2026 - Kết nối với tôi qua mạng xã hội.</p>
+        <p>© 2024 - Kết nối với tôi qua GitHub</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
