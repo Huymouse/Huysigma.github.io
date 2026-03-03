@@ -37,7 +37,7 @@ for (let i = 0; i < 12; i++) {
         <p class="box-num">Hộp #${i + 1}</p>
         <div class="box-icon">🎁</div>
         <h3 class="box-name" style="display: none;"></h3>
-        <p class="box-status">Nhấn để mở</p>
+        <p class="box-status">Nhấn vào đây này</p>
     `;
 
     box.addEventListener('click', function() {
