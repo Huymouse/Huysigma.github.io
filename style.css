@@ -24,7 +24,7 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
-/* Lưới 12 hộp quà (4 cột, 3 hàng) */
+/* Lưới quà */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -34,7 +34,7 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     padding: 0 20px 60px;
 }
 
-/* Định dạng cơ bản cho mỗi hộp */
+/* Định dạng hộp */
 .box {
     border-radius: 16px;
     padding: 30px 20px;
