@@ -42,20 +42,22 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     justify-content: center;
     transition: transform 0.2s ease, filter 0.2s ease;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    min-height: 250px; 
+    min-height: 250px;
 }
 
-/* Hiệu ứng khi lướt chuột qua hộp chưa mở */
 .box.unopened { cursor: pointer; }
 .box.unopened:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-5px) scale(1.05) rotate(3deg);
     filter: brightness(1.15);
 }
 
-/* Hiệu ứng mờ đi một chút khi hộp đã được mở */
-.box.opened { cursor: default; filter: brightness(0.95); }
+.box.opened { 
+    cursor: default; 
+    background: transparent !important;
+    box-shadow: none !important;
+}
 
-/* Chi tiết văn bản trong hộp */
+
 .box-num {
     font-size: 0.85rem;
     opacity: 0.9;
@@ -86,7 +88,7 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
 .box-name { font-size: 1.4rem; font-weight: 700; margin: 10px 0 5px; color: #fff; }
 .box-status { font-size: 0.9rem; opacity: 0.9; margin: 0; }
 
-/* BẢNG 22 MÀU GRADIENT */
+/* BẢNG MÀU GRADIENT */
 .c1 { background: linear-gradient(135deg, #ffb142, #ff9f43); }
 .c2 { background: linear-gradient(135deg, #a55eea, #8854d0); }
 .c3 { background: linear-gradient(135deg, #45aaf2, #2d98da); }
@@ -171,11 +173,6 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
 .btn-cancel { background: rgba(255, 255, 255, 0.1); color: white; }
 .btn-confirm { background: linear-gradient(135deg, #ff6b81, #eb3b5a); color: white; }
 
-/* Responsiveness */
-@media (max-width: 900px) { .grid-container { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 700px) { .grid-container { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { h1 { font-size: 2.2rem; } .grid-container { grid-template-columns: 1fr; } }
-/* NÚT CHUYỂN TRANG */
 .nav-container {
     margin-top: 30px;
     padding-bottom: 30px;
@@ -199,3 +196,8 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     transform: scale(1.05);
     filter: brightness(1.1);
 }
+
+/* Responsiveness */
+@media (max-width: 900px) { .grid-container { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px) { .grid-container { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { h1 { font-size: 2.2rem; } .grid-container { grid-template-columns: 1fr; } }

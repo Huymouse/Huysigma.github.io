@@ -17,7 +17,7 @@ for (let i = 0; i < 12; i++) {
     box.className = `box unopened ${colors[i]}`;
     
     box.innerHTML = `
-        <p class="box-num">Hộp #${i + 1}</p>
+        <p class="box-num">Túi #${i + 1}</p>
         <div class="box-icon">🎁</div> 
         <h3 class="box-name" style="display: none;"></h3>
         <p class="box-status">Nhấn vào đây này</p>
