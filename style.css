@@ -32,7 +32,6 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     padding: 0 20px 60px;
 }
 
-/* Định dạng cơ bản cho mỗi hộp */
 .box {
     border-radius: 16px;
     padding: 30px 20px;
@@ -42,21 +41,36 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     justify-content: center;
     transition: transform 0.2s ease, filter 0.2s ease;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    min-height: 250px;
+    min-height: 250px; 
+    border: 2px solid transparent; 
 }
 
 .box.unopened { cursor: pointer; }
 .box.unopened:hover {
-    transform: translateY(-5px) scale(1.05) rotate(3deg);
+    transform: translateY(-5px) scale(1.02);
     filter: brightness(1.15);
+}
+
+.box-icon { 
+    font-size: 4rem; 
+    margin-bottom: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.box.unopened:hover .box-icon {
+    transform: scale(1.2) rotate(15deg);
 }
 
 .box.opened { 
     cursor: default; 
-    background: transparent !important;
-    box-shadow: none !important;
+    background: transparent !important; 
+    box-shadow: none !important; 
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    filter: brightness(0.95);
 }
-
 
 .box-num {
     font-size: 0.85rem;
@@ -112,7 +126,6 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
 .c21 { background: linear-gradient(135deg, #fd9644, #fa8231); }
 .c22 { background: linear-gradient(135deg, #4b7bec, #3867d6); }
 
-/* --- CSS CHO POPUP TÙY CHỈNH --- */
 .popup-overlay {
     position: fixed;
     top: 0;
