@@ -28,7 +28,7 @@ const btnConfirm = document.getElementById('btnConfirm');
 let selectedBoxIndex = null;
 let selectedBoxElement = null;
 
-for (let i = 0; i < totalBoxes; i++) {
+for (let i = 0; i < 12; i++) {
     const box = document.createElement('div');
     box.className = `box unopened ${colors[i]}`;
     
