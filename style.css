@@ -24,7 +24,7 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
-/* Lưới 12 hộp quà (4 cột, 3 hàng) */
+/* Lưới 22 hộp quà (4 cột) */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -89,7 +89,7 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
 .box-name { font-size: 1.4rem; font-weight: 700; margin: 10px 0 5px; color: #fff; }
 .box-status { font-size: 0.9rem; opacity: 0.9; margin: 0; }
 
-/* BẢNG 12 MÀU GRADIENT */
+/* BẢNG 22 MÀU GRADIENT */
 .c1 { background: linear-gradient(135deg, #ffb142, #ff9f43); }
 .c2 { background: linear-gradient(135deg, #a55eea, #8854d0); }
 .c3 { background: linear-gradient(135deg, #45aaf2, #2d98da); }
@@ -102,6 +102,16 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
 .c10 { background: linear-gradient(135deg, #ff793f, #cd6133); }
 .c11 { background: linear-gradient(135deg, #34ace0, #227093); }
 .c12 { background: linear-gradient(135deg, #706fd3, #474787); }
+.c13 { background: linear-gradient(135deg, #f6e58d, #f9ca24); }
+.c14 { background: linear-gradient(135deg, #ffbe76, #f0932b); }
+.c15 { background: linear-gradient(135deg, #ff7979, #eb4d4b); }
+.c16 { background: linear-gradient(135deg, #badc58, #6ab04c); }
+.c17 { background: linear-gradient(135deg, #7ed6df, #22a6b3); }
+.c18 { background: linear-gradient(135deg, #e056fd, #be2edd); }
+.c19 { background: linear-gradient(135deg, #686de0, #4834d4); }
+.c20 { background: linear-gradient(135deg, #fc5c65, #eb3b5a); }
+.c21 { background: linear-gradient(135deg, #fd9644, #fa8231); }
+.c22 { background: linear-gradient(135deg, #4b7bec, #3867d6); }
 
 /* --- CSS CHO POPUP TÙY CHỈNH --- */
 .popup-overlay {
