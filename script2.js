@@ -1,5 +1,5 @@
-const gifts = Array(12).fill({ name: "Mạnh Tân", image: "manh-tan.png" });
-const colors = ['c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7', 'c8', 'c9', 'c10', 'c11', 'c12'];
+const gifts = Array(10).fill({ name: "Mạnh Tân", image: "manh-tan.png" });
+const colors = ['c13', 'c14', 'c15', 'c16', 'c17', 'c18', 'c19', 'c20', 'c21', 'c22'];
 gifts.sort(() => Math.random() - 0.5);
 
 const container = document.getElementById('boxContainer');
@@ -12,14 +12,14 @@ const btnConfirm = document.getElementById('btnConfirm');
 let selectedBoxIndex = null;
 let selectedBoxElement = null;
 
-for (let i = 0; i < 12; i++) {
+// Vòng lặp 10 hộp (từ 13 đến 22)
+for (let i = 0; i < 10; i++) {
     const box = document.createElement('div');
     box.className = `box unopened ${colors[i]}`;
     
-    // Đã fix lỗi icon ở đây
     box.innerHTML = `
-        <p class="box-num">Hộp #${i + 1}</p>
-        <div class="box-icon">🎁</div> 
+        <p class="box-num">Hộp #${i + 13}</p>
+        <div class="box-icon">🎁</div>
         <h3 class="box-name" style="display: none;"></h3>
         <p class="box-status">Nhấn vào đây này</p>
     `;
@@ -51,5 +51,5 @@ btnConfirm.addEventListener('click', () => {
     selectedBoxElement.querySelector('.box-status').innerText = 'Chưa tày lắm!';
 
     openedCount++;
-    progressText.innerText = `Tiến trình: ${openedCount} / 12 túi đã mất trink`;
+    progressText.innerText = `Tiến trình: ${openedCount} / 10 túi đã mất trink`;
 });
