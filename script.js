@@ -16,7 +16,6 @@ for (let i = 0; i < 12; i++) {
     const box = document.createElement('div');
     box.className = `box unopened ${colors[i]}`;
     
-    // Đã fix lỗi icon ở đây
     box.innerHTML = `
         <p class="box-num">Hộp #${i + 1}</p>
         <div class="box-icon">🎁</div> 

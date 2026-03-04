@@ -9,7 +9,6 @@ body {
     min-height: 100vh;
 }
 
-/* Header & Thanh tiến trình */
 header { padding: 40px 20px 30px; }
 h1 { font-size: 3rem; font-weight: 700; margin-bottom: 10px; }
 header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
@@ -24,7 +23,6 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
-/* Lưới 22 hộp quà (4 cột) */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -44,7 +42,7 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     justify-content: center;
     transition: transform 0.2s ease, filter 0.2s ease;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    min-height: 250px; /* Cố định chiều cao hộp */
+    min-height: 250px; 
 }
 
 /* Hiệu ứng khi lướt chuột qua hộp chưa mở */
@@ -76,7 +74,6 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     justify-content: center;
 }
 
-/* CSS CHO HÌNH ẢNH (MẠNH TÂN) */
 .gift-img {
     width: 100px;
     height: 100px;
