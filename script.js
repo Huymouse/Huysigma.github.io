@@ -7,9 +7,8 @@ let openedBoxes = [];
 if (localStorage.getItem('huy_gifts')) {
     gifts = JSON.parse(localStorage.getItem('huy_gifts'));
 } else {
-    // --- QUÀ ----//
     gifts = [
-       { name: "Chúc mừng!", image: "giaidocdac.jpg" },
+        { name: "Chúc mừng!", image: "giaidocdac.jpg" },
         { name: "Chúc mừng!", image: "giaidocdac.jpg" },
         { name: "Chúc mừng!", image: "giainhat.jpg" },
         { name: "Chúc mừng!", image: "giainhat.jpg" },
@@ -32,7 +31,6 @@ if (localStorage.getItem('huy_gifts')) {
         { name: "Chúc mừng!", image: "giaikk.jpg" },
         { name: "Chúc mừng!", image: "giaikk.jpg" }
     ];
-    // Lệnh random
     gifts.sort(() => Math.random() - 0.5);
     localStorage.setItem('huy_gifts', JSON.stringify(gifts));
 }
@@ -45,7 +43,7 @@ const container = document.getElementById('boxContainer');
 const progressText = document.getElementById('progressText');
 
 const updateProgress = () => {
-    progressText.innerText = `Tiến trình: ${openedBoxes.length} / ${totalBoxes} túi đã mất trink`;
+    if(progressText) progressText.innerText = `Tiến trình: ${openedBoxes.length} / ${totalBoxes} túi đã mất trink`;
 };
 updateProgress();
 
@@ -81,15 +79,15 @@ for (let i = 0; i < 12; i++) {
         if (this.classList.contains('opened')) return;
         selectedBoxIndex = i;
         selectedBoxElement = this;
-        popup.classList.remove('hidden');
+        if(popup) popup.classList.remove('hidden');
     });
 
-    container.appendChild(box);
+    if(container) container.appendChild(box);
 }
 
-btnCancel.addEventListener('click', () => popup.classList.add('hidden'));
+if(btnCancel) btnCancel.addEventListener('click', () => popup.classList.add('hidden'));
 
-btnConfirm.addEventListener('click', () => {
+if(btnConfirm) btnConfirm.addEventListener('click', () => {
     popup.classList.add('hidden'); 
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
 
@@ -108,16 +106,15 @@ btnConfirm.addEventListener('click', () => {
     updateProgress();
 });
 
-// --- 4. TÍNH NĂNG NÚT CHƠI LẠI (DÙNG POPUP) ---
 const btnReset = document.getElementById('btnReset');
 const resetPopup = document.getElementById('resetPopup');
 const btnCancelReset = document.getElementById('btnCancelReset');
 const btnConfirmReset = document.getElementById('btnConfirmReset');
 
-if (btnReset) {
+if (btnReset && resetPopup) {
     btnReset.addEventListener('click', () => { resetPopup.classList.remove('hidden'); });
 }
-if (btnCancelReset) {
+if (btnCancelReset && resetPopup) {
     btnCancelReset.addEventListener('click', () => { resetPopup.classList.add('hidden'); });
 }
 if (btnConfirmReset) {

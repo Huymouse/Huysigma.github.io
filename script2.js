@@ -43,7 +43,7 @@ const container = document.getElementById('boxContainer');
 const progressText = document.getElementById('progressText');
 
 const updateProgress = () => {
-    progressText.innerText = `Tiến trình: ${openedBoxes.length} / ${totalBoxes} túi đã mất trink`;
+    if(progressText) progressText.innerText = `Tiến trình: ${openedBoxes.length} / ${totalBoxes} túi đã mất trink`;
 };
 updateProgress();
 
@@ -79,15 +79,15 @@ for (let i = 12; i < 22; i++) {
         if (this.classList.contains('opened')) return;
         selectedBoxIndex = i;
         selectedBoxElement = this;
-        popup.classList.remove('hidden');
+        if(popup) popup.classList.remove('hidden');
     });
 
-    container.appendChild(box);
+    if(container) container.appendChild(box);
 }
 
-btnCancel.addEventListener('click', () => popup.classList.add('hidden'));
+if(btnCancel) btnCancel.addEventListener('click', () => popup.classList.add('hidden'));
 
-btnConfirm.addEventListener('click', () => {
+if(btnConfirm) btnConfirm.addEventListener('click', () => {
     popup.classList.add('hidden'); 
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
 
@@ -111,10 +111,10 @@ const resetPopup = document.getElementById('resetPopup');
 const btnCancelReset = document.getElementById('btnCancelReset');
 const btnConfirmReset = document.getElementById('btnConfirmReset');
 
-if (btnReset) {
+if (btnReset && resetPopup) {
     btnReset.addEventListener('click', () => { resetPopup.classList.remove('hidden'); });
 }
-if (btnCancelReset) {
+if (btnCancelReset && resetPopup) {
     btnCancelReset.addEventListener('click', () => { resetPopup.classList.add('hidden'); });
 }
 if (btnConfirmReset) {
