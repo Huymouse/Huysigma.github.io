@@ -7,7 +7,32 @@ let openedBoxes = [];
 if (localStorage.getItem('huy_gifts')) {
     gifts = JSON.parse(localStorage.getItem('huy_gifts'));
 } else {
-    gifts = Array(totalBoxes).fill({ name: "Mạnh Tân", image: "manh-tan.png" });
+    // --- QUÀ ----//
+    gifts = [
+       { name: "Chúc mừng!", image: "giaidocdac.jpg" },
+        { name: "Chúc mừng!", image: "giaidocdac.jpg" },
+        { name: "Chúc mừng!", image: "giainhat.jpg" },
+        { name: "Chúc mừng!", image: "giainhat.jpg" },
+        { name: "Chúc mừng!", image: "giainhat.jpg" },
+        { name: "Chúc mừng!", image: "giainhat.jpg" },
+        { name: "Chúc mừng!", image: "giainhat.jpg" },
+        { name: "Chúc mừng!", image: "giainhat.jpg" },
+        { name: "Chúc mừng!", image: "giainhat.jpg" },
+        { name: "Chúc mừng!", image: "giainhat.jpg" },
+        { name: "Chúc mừng!", image: "giainhi.jpg" },
+        { name: "Chúc mừng!", image: "giainhi.jpg" },
+        { name: "Chúc mừng!", image: "giainhi.jpg" },
+        { name: "Chúc mừng!", image: "giainhi.jpg" },
+        { name: "Chúc mừng!", image: "giainhi.jpg" },
+        { name: "Chúc mừng!", image: "giaiba.jpg" },
+        { name: "Chúc mừng!", image: "giaiba.jpg" },
+        { name: "Chúc mừng!", image: "giaiba.jpg" },
+        { name: "Chúc mừng!", image: "giaikk.jpg" },
+        { name: "Chúc mừng!", image: "giaikk.jpg" },
+        { name: "Chúc mừng!", image: "giaikk.jpg" },
+        { name: "Chúc mừng!", image: "giaikk.jpg" }
+    ];
+    // Lệnh random
     gifts.sort(() => Math.random() - 0.5);
     localStorage.setItem('huy_gifts', JSON.stringify(gifts));
 }
@@ -18,9 +43,11 @@ if (localStorage.getItem('huy_opened')) {
 
 const container = document.getElementById('boxContainer');
 const progressText = document.getElementById('progressText');
-let openedCount = openedBoxes.length;
 
-progressText.innerText = `Tiến trình: ${openedCount} / ${totalBoxes} túi đã mất trink`;
+const updateProgress = () => {
+    progressText.innerText = `Tiến trình: ${openedBoxes.length} / ${totalBoxes} túi đã mất trink`;
+};
+updateProgress();
 
 const popup = document.getElementById('customPopup');
 const btnCancel = document.getElementById('btnCancel');
@@ -33,7 +60,7 @@ for (let i = 0; i < 12; i++) {
     box.className = `box unopened ${colors[i]}`;
     
     box.innerHTML = `
-        <p class="box-num">Túi #${i + 1}</p>
+        <p class="box-num">Hộp #${i + 1}</p>
         <div class="box-icon">🎁</div>
         <h3 class="box-name" style="display: none;"></h3>
         <p class="box-status">Nhấn vào đây này</p>
@@ -71,7 +98,6 @@ btnConfirm.addEventListener('click', () => {
 
     const gift = gifts[selectedBoxIndex];
     selectedBoxElement.querySelector('.box-icon').innerHTML = `<img src="${gift.image}" alt="${gift.name}" class="gift-img">`;
-    
     const nameEl = selectedBoxElement.querySelector('.box-name');
     nameEl.innerText = gift.name;
     nameEl.style.display = 'block'; 
@@ -79,19 +105,25 @@ btnConfirm.addEventListener('click', () => {
 
     openedBoxes.push(selectedBoxIndex);
     localStorage.setItem('huy_opened', JSON.stringify(openedBoxes));
-
-    openedCount++;
-    progressText.innerText = `Tiến trình: ${openedCount} / ${totalBoxes} túi đã mất trink`;
+    updateProgress();
 });
 
+// --- 4. TÍNH NĂNG NÚT CHƠI LẠI (DÙNG POPUP) ---
 const btnReset = document.getElementById('btnReset');
+const resetPopup = document.getElementById('resetPopup');
+const btnCancelReset = document.getElementById('btnCancelReset');
+const btnConfirmReset = document.getElementById('btnConfirmReset');
+
 if (btnReset) {
-    btnReset.addEventListener('click', () => {
-        const isSure = confirm('ấn Ok là bay màu hết!');
-        if (isSure) {
-            localStorage.removeItem('huy_gifts');
-            localStorage.removeItem('huy_opened');
-            location.reload();
-        }
+    btnReset.addEventListener('click', () => { resetPopup.classList.remove('hidden'); });
+}
+if (btnCancelReset) {
+    btnCancelReset.addEventListener('click', () => { resetPopup.classList.add('hidden'); });
+}
+if (btnConfirmReset) {
+    btnConfirmReset.addEventListener('click', () => {
+        localStorage.removeItem('huy_gifts');
+        localStorage.removeItem('huy_opened');
+        location.reload(); 
     });
 }

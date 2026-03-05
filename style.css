@@ -99,7 +99,7 @@ header p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.box-name { font-size: 1.4rem; font-weight: 700; margin: 10px 0 5px; color: #fff; }
+.box-name { font-size: 0.85rem; font-weight: 700; margin: 10px 0 5px; color: #fff; }
 .box-status { font-size: 0.9rem; opacity: 0.9; margin: 0; }
 
 /* BẢNG MÀU GRADIENT */
