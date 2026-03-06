@@ -29,7 +29,7 @@ if (localStorage.getItem('huy_gifts')) {
         { name: "Chúc mừng!", image: "giaikk.jpg", message: "Bạn đã trúng 1 cặp lego do các zai đẹp c8 chuẩn bị🌹" },
         { name: "Chúc mừng!", image: "giaikk.jpg", message: "Bạn đã trúng 1 cặp lego do các zai đẹp c8 chuẩn bị🌹" },
         { name: "Chúc mừng!", image: "giaikk.jpg", message: "Bạn đã trúng 1 cặp lego do các zai đẹp c8 chuẩn bị🌹" },
-        { name: "Chúc mừng!", image: "giaikk.jpg", message: "TBạn đã trúng 1 cặp lego do các zai đẹp c8 chuẩn bị🌹" }
+        { name: "Chúc mừng!", image: "giaikk.jpg", message: "Bạn đã trúng 1 cặp lego do các zai đẹp c8 chuẩn bị🌹" }
     ];
     gifts.sort(() => Math.random() - 0.5);
     localStorage.setItem('huy_gifts', JSON.stringify(gifts));
