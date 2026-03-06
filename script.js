@@ -73,6 +73,9 @@ for (let i = 0; i < 12; i++) {
         box.querySelector('.box-name').innerText = gift.name;
         box.querySelector('.box-name').style.display = 'block'; 
         box.querySelector('.box-status').innerText = gift.message;
+        if (gift.image === "giaidocdac.jpg") {
+            box.classList.add('jackpot-effect');
+        }
     }
 
     box.addEventListener('click', function() {
