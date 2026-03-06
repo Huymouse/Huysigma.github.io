@@ -9,7 +9,7 @@ if (localStorage.getItem('huy_gifts')) {
 } else {
     gifts = [
         { name: "Chúc mừng!", image: "giaidocdac.jpg", message: "💖Bạn đã trúng quà độc đắc!!💖" },
-        { name: "Chúc mừng!", image: "giaidocdac.jpg", message: "💖Bạn đã trúng quà độc đắc!!💖" },
+        { name: "Chúc mừng!", image: "giaidocdac.jpg", message: "✨Bạn đã trúng quà đặc biệt!!✨" },
         { name: "Chúc mừng!", image: "giainhat.jpg", message: "Bạn trúng 1 bó hoa do các zai đẹp c8 chuẩn bị❤️" },
         { name: "Chúc mừng!", image: "giainhat.jpg", message: "Bạn trúng 1 bó hoa do các zai đẹp c8 chuẩn bị❤️" },
         { name: "Chúc mừng!", image: "giainhat.jpg", message: "Bạn trúng 1 bó hoa do các zai đẹp c8 chuẩn bị❤️" },
@@ -58,7 +58,7 @@ for (let i = 12; i < 22; i++) {
     box.className = `box unopened ${colors[i]}`;
     
     box.innerHTML = `
-        <p class="box-num">Hộp #${i + 1}</p>
+        <p class="box-num">Túi #${i + 1}</p>
         <div class="box-icon">🎁</div>
         <h3 class="box-name" style="display: none;"></h3>
         <p class="box-status">Nhấn vào đây này</p>
