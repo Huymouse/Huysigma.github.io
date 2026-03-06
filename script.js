@@ -95,6 +95,16 @@ if(btnConfirm) btnConfirm.addEventListener('click', () => {
     selectedBoxElement.classList.add('opened');
 
     const gift = gifts[selectedBoxIndex];
+    if (gift.image === "giaidocdac.jpg") 
+    {
+        selectedBoxElement.classList.add('jackpot-effect');
+    } 
+    else 
+        {
+        selectedBoxElement.classList.remove('jackpot-effect');
+    }
+
+    selectedBoxElement.querySelector('.box-icon').innerHTML = `<img src="${gift.image}" alt="${gift.name}" class="gift-img">`;
     selectedBoxElement.querySelector('.box-icon').innerHTML = `<img src="${gift.image}" alt="${gift.name}" class="gift-img">`;
     const nameEl = selectedBoxElement.querySelector('.box-name');
     nameEl.innerText = gift.name;
